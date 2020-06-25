@@ -97,7 +97,41 @@ SELECT 명령에서는 <code>*</code> 를 사용해서 테이블의 모든 열�
 많은 행 속에서 필요한 데이터만 검색하기 위해서는 WHERE 구를 사용.<br>
 <code>&lt;SYNTAX&gt; WHERE 구로 행 추출</code><br>
 <code>SELECT 열 FROM 테이블명 WHERE 조건식</code><br>
-FROM 구 뒤에 WHERE 구 표기</li>
+FROM 구 뒤에 WHERE 구 표기<br>
+WHERE 구의 조건식은 <strong>열과 연산자, 상수</strong>로 구성되는 식.<br>
+조건식은 <code>=</code> 연산자(비교 연산자)를 기준으로 좌변과 우변의 항목을 비교하고, 서로 같은 값이면 참, 다른 값이면 거짓을 반호나. 조건식을 만족한 (참) 행만 결괏값으로 반환.<br>
+값이 서로 다른 경우 <code>&lt;&gt;</code> 연산자를 통해 참이 되는 조건식으로 사용<br>
+WHERE 구에서 조건식에 일치하는 행이 전혀 없는 경우 아무것도 반환되지 않음</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>문자열형의 상수<br>
+수치형 조건식의 경우 비교할 숫자를 그대로 조건식에 표기. 하지만 문자열형을 비교할 경우는 <strong>싱글쿼트(’ ')로 둘러싸 표기</strong>해야 함.<br>
+날짜 시간형의 경우에도 싱글쿼트<code>' '</code>로 둘러싸 표기. 연원일은 하이픈<code>-</code>으로 구분. 시각은 시분초를 콜론<code>:</code>으로 구분하여 표기</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>자료형에 맞게 표기한 상수값을 리터럴(literal). 문자열 리터럴은 싱글쿼트로 둘러싸 표기</p>
+</blockquote>
+<ul>
+<li>
+<ol start="4">
+<li>NULL값 검색<br>
+NULL값 검색하는 경우 주의.<br>
+<code>IS NULL</code> 사용하여 NULL 검색</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>비교 연산자<br>
+<strong>=연산자</strong> : 좌변과 우변의 값이 같을 경우 참<br>
+<strong>&lt;&gt;연산자</strong> : 좌변과 우변의 값이 같지 않을 경우 참<br>
+<strong>&gt;연산자</strong> :  좌변의 값이 우변의 값보다 클 경우 참. 같거나 작은 경우 거짓<br>
+<strong>&gt;=연산자</strong> : 좌변의 값이 우변의 값보다 크거나 같을 경우 참. 작을경우 거짓<br>
+<strong>&lt;연산자</strong> : 좌변의 값이 우변의 값보다 작을 경우 참. 같거나 클 경우 거짓<br>
+<strong>&lt;=연산자</strong>: 좌변의 값이 우변의 값보다 작거나 같을 경우 참. 클 경우 거짓</li>
 </ol>
 </li>
 </ul>
