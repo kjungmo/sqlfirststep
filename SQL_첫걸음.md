@@ -70,13 +70,34 @@ DESC 테이블명;<br>
 </li>
 </ul>
 <h2 id="강-검색-조건-지정하기">6강 검색 조건 지정하기</h2>
-<p>데이터 검색에는 열을 지정하는 방법과 행을 지정하는 방법이 있다.  SELECT구와 WHERE 구<br>
+<p>데이터 검색에는 열을 지정하는 방법과 행을 지정하는 방법이 있다.  <code>&lt;SYNTAX&gt;SELECT구와 WHERE 구</code><br>
 <code>SELECT 열1, 열2 FROM 테이블명 WHERE 조건식</code><br>
 행을 선택할 때는 WHERE구를 사용하며, 열을 선택할 때는 SELECT 구를 사용</p>
 <ul>
 <li>
 <ol>
-<li>SELECT 구에서 열 지정하기</li>
+<li>SELECT 구에서 열 지정하기<br>
+SELECT 명령에서는 <code>*</code> 를 사용해서 테이블의 모든 열을 취득함. 열을 한정하기 위해 <code>*</code> 부분에 열명을 지정.<br>
+<code>&lt;SYNTAX&gt; SELECT구에서 열 지정</code><br>
+<code>SELECT 열1, 열2, ... FROM 테이블명</code><br>
+열은 위의 구문처럼 콤마<code>,</code>를 이용하여 구분 지으며 여러 개를 지정할 수 있음. 지정한 열만 결괏값으로 표시됨<br>
+단, <code>SELECT FROM sample21;</code>과 같이 열을 전혀 지정하지 않거나 테이블에 존재하지 않는 열을 지정하는 경우 에러 발생.<br>
+열 지정 순서는 임의로 정할 수 있음. 결과는 지정한 열의 순서대로 표시됨.<br>
+동일한 열을 중복해서 지정해도 무관</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>SELECT 구에서 결과로 표시하고 싶은 열을 지정 가능</p>
+</blockquote>
+<ul>
+<li>
+<ol start="2">
+<li>WHERE 구에서 행 지정하기<br>
+많은 행 속에서 필요한 데이터만 검색하기 위해서는 WHERE 구를 사용.<br>
+<code>&lt;SYNTAX&gt; WHERE 구로 행 추출</code><br>
+<code>SELECT 열 FROM 테이블명 WHERE 조건식</code><br>
+FROM 구 뒤에 WHERE 구 표기</li>
 </ol>
 </li>
 </ul>
